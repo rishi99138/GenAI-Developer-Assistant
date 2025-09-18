@@ -1,0 +1,5 @@
+'import streamlit as st' 
+'' 
+'st.set_page_config(page_title="GitHub Repo Assistant", layout="wide")' 
+'st.title("?? GenAI-Powered Developer Assistant")' 
+'st.write("This application is currently under construction. Stay tuned!")' 

@@ -1,0 +1,7 @@
+'langchain' 
+'streamlit' 
+'chromadb-py' 
+'python-dotenv' 
+'PyGithub' 
+'tiktoken' 
+'google-generativeai' 
