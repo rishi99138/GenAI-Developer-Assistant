@@ -2,8 +2,7 @@
 import os
 from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_community.vectorstores import Chroma
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
@@ -46,7 +45,7 @@ def get_vectorstore(text_chunks):
     Takes text chunks, creates embeddings using a local model, and stores them in a Chroma vector store.
     """
     # Use a free, open-source embedding model from Hugging Face
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
     # We are storing the vectors in-memory for simplicity
     vectorstore = Chroma.from_texts(texts=text_chunks, embedding=embeddings)
