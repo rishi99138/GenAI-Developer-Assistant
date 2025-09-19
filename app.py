@@ -1,3 +1,8 @@
+# --- Patch for sqlite3 ---
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# -------------------------
 import streamlit as st
 # We import the functions we made in our "brain" file
 from core import get_github_repo_content, get_text_chunks, get_vectorstore, get_conversation_chain
