@@ -1,0 +1,9 @@
+# Ignore the Anaconda environment
+gen-ai/
+
+# Ignore a venv environment if it exists
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc

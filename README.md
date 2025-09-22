@@ -1,34 +1,37 @@
-# GenAI-Powered Developer Assistant
+# 🤖 GenAI Repo Assistant
 
-[![Status](https://img.shields.io/badge/Status-Work%20in%20Progress-yellow)](https://github.com/your-username/your-repo-name)
-
-### Project Vision
-
-An intelligent developer assistant that uses a Retrieval-Augmented Generation (RAG) architecture to provide conversational answers about any public GitHub repository. This tool is designed to accelerate developer onboarding and improve codebase comprehension by acting as an on-demand expert for any project.
+A conversational AI assistant that uses a Retrieval-Augmented Generation (RAG) pipeline to answer questions about any public GitHub repository.
 
 ---
 
-### Planned Features
+## 🚀 Live Demo
 
-* **GitHub Repo Ingestion:** Ingests documentation (`README.md`, `/docs` folder) and recent issues from a given repository URL.
-* **RAG Pipeline:** Uses LangChain to build a robust pipeline that chunks, embeds, and stores the repository's knowledge in a Vector Database.
-* **Conversational Q&A:** An interactive UI (built with Streamlit) for users to ask natural language questions.
-* **Cloud-Native Deployment:** The entire application will be containerized with Docker for scalable, serverless deployment.
+You can try the live application hosted on Hugging Face Spaces:
+
+**[https://rishi99138-genai-developer-assistant.hf.space](https://rishi99138-genai-developer-assistant.hf.space)**
 
 ---
 
-### Tech Stack
+## 📋 Project Overview
+
+This project is a full-stack Generative AI application built to solve a common developer problem: quickly understanding a new or complex codebase. Instead of manually searching through documentation and issues, this tool allows developers to ask natural language questions and receive accurate, context-aware answers.
+
+The application ingests a repository's `README.md` file, processes the text, and uses a vector database for efficient semantic retrieval. A Large Language Model then generates a coherent answer based on the retrieved information.
+
+## ✨ Features
+
+* **Dynamic Data Ingestion:** Fetches and processes the `README.md` from any public GitHub repository in real-time.
+* **RAG Pipeline:** Implements a Retrieval-Augmented Generation pipeline to ensure answers are factually grounded in the provided document, minimizing hallucinations.
+* **Conversational Interface:** A user-friendly, chat-based UI built with Streamlit that maintains conversation history.
+* **Performance Optimized:** Caches processed repositories to provide near-instant responses for subsequent queries on the same URL.
+* **Cloud-Native:** Deployed and fully functional on a public cloud platform (Hugging Face Spaces).
+
+## 🛠️ Tech Stack
 
 * **Language:** Python
 * **Core Framework:** LangChain
-* **LLM:** Google Gemini / OpenAI GPT
-* **Vector Database:** ChromaDB
+* **LLM:** Google Gemini
+* **Embeddings:** Hugging Face `all-MiniLM-L6-v2`
+* **Vector Store:** ChromaDB
 * **Frontend:** Streamlit
-* **Containerization:** Docker
-* **Deployment:** Streamlit Community Cloud / Hugging Face Spaces
-
----
-
-### Current Status
-
-The foundational architecture is being laid out. The project structure has been created, and the core RAG logic is currently under development.
+* **Deployment:** Hugging Face Spaces / AWS App Runner (via Docker)
