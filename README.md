@@ -10,6 +10,8 @@ You can try the live application hosted on Hugging Face Spaces:
 
 **[https://rishi99138-genai-developer-assistant.hf.space](https://rishi99138-genai-developer-assistant.hf.space)**
 
+NOTE: The live demo is hosted on a free-tier community server. The application may take up to 60 seconds to load on the first visit as the server "wakes up" and initializes the AI models. Subsequent loads will be much faster.
+
 ---
 
 ## 📋 Project Overview
